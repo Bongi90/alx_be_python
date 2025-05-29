@@ -13,15 +13,15 @@ def provide_weather_advice():
     """
     # 1. Prompt User for Weather Input:
     # Use the prompt: What's the weather like today? (sunny/rainy/cold):
-    weather_input = input("What's the weather like today? (sunny/rainy/cold): ").lower()
+    weather = input("What's the weather like today? (sunny/rainy/cold): ").lower() # Changed variable name to 'weather'
 
     # 2. Provide Clothing Recommendations:
     # Based on the user’s input, your program will recommend different types of clothing:
-    if weather_input == "sunny":
+    if weather == "sunny": # Using 'weather' variable
         print("Wear a t-shirt and sunglasses.")
-    elif weather_input == "rainy":
+    elif weather == "rainy": # Using 'weather' variable
         print("Don't forget your umbrella and a raincoat.")
-    elif weather_input == "cold":
+    elif weather == "cold": # Using 'weather' variable
         print("Make sure to wear a warm coat and a scarf.")
     else:
         # Include an else statement that handles unexpected input by printing:
@@ -30,3 +30,4 @@ def provide_weather_advice():
 # Call the function to run the script
 if __name__ == "__main__":
     provide_weather_advice()
+
