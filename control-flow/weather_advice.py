@@ -1,4 +1,7 @@
 # Objective: Utilize conditional statements to guide program execution based on user input regarding weather conditions.
+# Task Description: Create a Python script named weather_advice.py.
+# This script will ask the user about the current weather conditions and provide clothing recommendations based on the input.
+# This task aims to demonstrate the use of if, elif, and else statements to make decisions in a program.
 # File: weather_advice.py
 # Directory: control-flow
 # Repository: alx_be_python
@@ -6,25 +9,23 @@
 def provide_weather_advice():
     """
     Asks the user for current weather conditions and provides clothing recommendations.
-    Demonstrates the use of if, elif, and else statements.
+    Ensures exact matching for prompts, conditions, and outputs as required by checks.
     """
-    # Prompt User for Weather Input
+    # 1. Prompt User for Weather Input:
     # Use the prompt: What's the weather like today? (sunny/rainy/cold):
-    weather_input = input("What's the weather like today? (sunny/rainy/cold): ").lower() # .lower() converts input to lowercase for consistent comparison
+    weather_input = input("What's the weather like today? (sunny/rainy/cold): ").lower()
 
-    # Provide Clothing Recommendations based on user's input
+    # 2. Provide Clothing Recommendations:
+    # Based on the user’s input, your program will recommend different types of clothing:
     if weather_input == "sunny":
-        recommendation = "Wear a t-shirt and sunglasses."
+        print("Wear a t-shirt and sunglasses.")
     elif weather_input == "rainy":
-        recommendation = "Don't forget your umbrella and a raincoat."
+        print("Don't forget your umbrella and a raincoat.")
     elif weather_input == "cold":
-        recommendation = "Make sure to wear a warm coat and a scarf."
+        print("Make sure to wear a warm coat and a scarf.")
     else:
-        # Handles unexpected input
-        recommendation = "Sorry, I don't have recommendations for this weather."
-
-    # Output the Recommendation
-    print(recommendation)
+        # Include an else statement that handles unexpected input by printing:
+        print("Sorry, I don't have recommendations for this weather.")
 
 # Call the function to run the script
 if __name__ == "__main__":
